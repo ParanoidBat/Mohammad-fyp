@@ -1,4 +1,15 @@
 # images
+
 *.png
 *.jpg
 *.jpeg
+
+# folders
+
+[Ii]mages/
+Fanatsy GUI/
+
+# compressed
+
+*.zip
+*.rar
