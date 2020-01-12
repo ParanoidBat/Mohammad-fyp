@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -14,6 +13,7 @@ public class GameController : MonoBehaviour
     public Text scoreText;
     public Text countdownText;
     public Text roundEndScoreDisplay;
+    public Text highScoreDisplay;
 
     private bool isRoundActive;
     private float timeLeft;
@@ -67,6 +67,7 @@ public class GameController : MonoBehaviour
             GameObject answerButtonGameObject = answerButtonsObjectPool.GetObject();
             answerButtonGameObjects.Add(answerButtonGameObject);
             answerButtonGameObject.transform.SetParent(answerButtonParent); // parent is the answers panel
+            answerButtonGameObject.transform.localScale = Vector3.one;
 
             AnswerButton answerButton = answerButtonGameObject.GetComponent<AnswerButton>();
             answerButton.Setup(questionData.answers[i]);
@@ -76,6 +77,9 @@ public class GameController : MonoBehaviour
     public void EndRound()
     {
         isRoundActive = false;
+
+        dataController.UpdateHighScore(Score);
+        highScoreDisplay.text = dataController.GetHighestPlayerScore().ToString(); // text game object is not made. make one in unity editor
 
         // deactivate windows to show panel
         quizWindow.SetActive(false);

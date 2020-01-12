@@ -13,3 +13,7 @@ Fanatsy GUI/
 
 *.zip
 *.rar
+
+# files
+*.txt
+*.apk
