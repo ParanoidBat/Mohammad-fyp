@@ -1,7 +1,7 @@
 {
-  "allRoundsData": [
+  "allRoundsDataPhysics": [
     {
-      "name": "Animals",
+      "name": "Physics",
       "countdown": 20,
       "scoreAdded": 10,
       "questions": [
@@ -48,6 +48,50 @@
             },
             {
               "answerText": "In a tree",
+              "isCorrect": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "allRoundsDataMaths": [
+    {
+      "name": "Maths",
+      "countdown": 20,
+      "scoreAdded": 10,
+      "questions":[
+        {
+          "questionText": "Maths jay?",
+          "answers": [
+            {
+              "answerText": "True",
+              "isCorrect": true
+            },
+            {
+              "answerText": "False",
+              "isCorrect": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "allRoundsDataTech": [
+    {
+      "name": "Tech",
+      "countdown": 20,
+      "scoreAdded": 10,
+      "questions":[
+        {
+          "questionText": "Tech jay?",
+          "answers": [
+            {
+              "answerText": "True",
+              "isCorrect": true
+            },
+            {
+              "answerText": "False",
               "isCorrect": false
             }
           ]

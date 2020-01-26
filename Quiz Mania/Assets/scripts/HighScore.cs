@@ -1,3 +1,5 @@
 ﻿public class HighScore{
-    public int highest_score = 0;
+    public int physicsHighestScore = 0;
+    public int mathsHighestScore = 0;
+    public int techHighestScore = 0;
 }

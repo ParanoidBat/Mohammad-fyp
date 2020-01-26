@@ -5,5 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class GameData
 {
-    public RoundData[] allRoundsData;
+    public RoundData[] allRoundsDataPhysics;
+    public RoundData[] allRoundsDataMaths;
+    public RoundData[] allRoundsDataTech;
 }

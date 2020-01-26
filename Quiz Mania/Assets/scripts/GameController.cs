@@ -29,11 +29,13 @@ public class GameController : MonoBehaviour
     
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
 
+    private string sceneName;
+
     // Use this for initialization
     void Start()
     {
         dataController = FindObjectOfType<DataController>(); //get the data controller instance to populate game with data
-        currentRoundData = dataController.GetCurrentRoundData();
+        LoadData();
         questionsArray = currentRoundData.questions;
         timeLeft = currentRoundData.countdown;
         UpdateTimeLeft();
@@ -78,8 +80,20 @@ public class GameController : MonoBehaviour
     {
         isRoundActive = false;
 
-        dataController.UpdateHighScore(Score);
-        highScoreDisplay.text = dataController.GetHighestPlayerScore().ToString(); // text game object is not made. make one in unity editor
+        if(sceneName == "Quiz Window Physics"){
+            dataController.LoadHighScore("physics");
+            dataController.UpdateHighScore(Score, "physics");
+        }
+        else if(sceneName == "Quiz Window Maths"){
+            dataController.LoadHighScore("maths");
+            dataController.UpdateHighScore(Score, "maths");
+        }
+        else if(sceneName == "Quiz Window Tech"){
+            dataController.LoadHighScore("tech");
+            dataController.UpdateHighScore(Score, "tech");
+        }
+
+        highScoreDisplay.text = dataController.GetHighestPlayerScore(sceneName).ToString(); // text game object is not made. make one in unity editor
 
         // deactivate windows to show panel
         quizWindow.SetActive(false);
@@ -137,6 +151,27 @@ public class GameController : MonoBehaviour
                 EndRound();
             }
 
+        }
+    }
+
+    void LoadData(){ // get the data of the category for whom scene we're in
+
+        sceneName = SceneManager.GetActiveScene().name;
+
+        if(sceneName == "Quiz Window Physics"){
+            currentRoundData = dataController.GetPhysicsRoundData();
+        }
+
+        else if (sceneName == "Quiz Window Maths"){
+            currentRoundData = dataController.GetMathsRoundData();
+        }
+
+        else if(sceneName == "Quiz Window Tech"){
+            currentRoundData = dataController.GetTechRoundData();
+        }
+
+        else{
+            Debug.LogError("Data could not be loaded!");
         }
     }
 }

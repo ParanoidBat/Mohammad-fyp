@@ -5,8 +5,12 @@ using UnityEngine;
 
 public class DataController : MonoBehaviour{
 
-    private RoundData[] allRoundsData;
+    private RoundData[] allRoundsDataPhysics;
+    private RoundData[] allRoundsDataMaths;
+    private RoundData[] allRoundsDataTech;
+
     private HighScore highScore;
+
     private string fileName = "data.json";
 
     // Use this for initialization
@@ -15,30 +19,57 @@ public class DataController : MonoBehaviour{
         DontDestroyOnLoad(gameObject);
 
         LoadGameData();
-        LoadHighScore();
+        // LoadHighScore();
 
         SceneManager.LoadScene("Main Menu");
     }
 
-    public RoundData GetCurrentRoundData()
+    public RoundData GetPhysicsRoundData()
     {
-        return allRoundsData[0];
+        return allRoundsDataPhysics[0];
     }
 
-    public void UpdateHighScore(int newScore)
+    public RoundData GetMathsRoundData()
     {
-        Debug.LogError("prevHighScore: " + highScore.highest_score);
+        return allRoundsDataMaths[0];
+    }
+
+    public RoundData GetTechRoundData()
+    {
+        return allRoundsDataTech[0];
+    }
+
+    public void UpdateHighScore(int newScore, string key)
+    {
         // If newScore is greater than highest score, update it
-        if (newScore > highScore.highest_score)
+        if (key == "physics" && newScore > highScore.physicsHighestScore)
         {
-            highScore.highest_score = newScore;
-            SaveHighScore();
+            highScore.physicsHighestScore = newScore;
+            SaveHighScore(key);
+        }
+
+        else if (key == "maths" && newScore > highScore.mathsHighestScore)
+        {
+            highScore.mathsHighestScore = newScore;
+            SaveHighScore(key);
+        }
+
+        else if (key == "tech" && newScore > highScore.techHighestScore)
+        {
+            highScore.techHighestScore = newScore;
+            SaveHighScore(key);
         }
     }
 
-    public int GetHighestPlayerScore()
+    public int GetHighestPlayerScore(string key)
     {
-        return highScore.highest_score;
+        if (key == "Quiz Window Physics")
+            return highScore.physicsHighestScore;
+
+        if(key == "Quiz Window Maths")
+            return highScore.mathsHighestScore;
+
+        return highScore.techHighestScore;
     }
 
     private void LoadGameData()
@@ -53,7 +84,9 @@ public class DataController : MonoBehaviour{
             GameData loadedData = JsonUtility.FromJson<GameData>(jsonData);
 
             // Retrieve the allRoundData property of loadedData
-            allRoundsData = loadedData.allRoundsData;
+            allRoundsDataPhysics = loadedData.allRoundsDataPhysics;
+            allRoundsDataMaths = loadedData.allRoundsDataMaths;
+            allRoundsDataTech = loadedData.allRoundsDataTech;
         }
         else
         {
@@ -61,19 +94,42 @@ public class DataController : MonoBehaviour{
         }
     }
 
-    private void LoadHighScore()
+    public void LoadHighScore(string key)
     {
         highScore = new HighScore();
 
-        if (PlayerPrefs.HasKey("highest_score"))
-        {
-            highScore.highest_score = PlayerPrefs.GetInt("highest_score");
+        if(key == "physics"){
+            if (PlayerPrefs.HasKey("physics"))
+            {
+                highScore.physicsHighestScore = PlayerPrefs.GetInt("physics");
+            }
+        }
+        else if(key == "maths"){
+            if (PlayerPrefs.HasKey("maths"))
+            {
+                highScore.mathsHighestScore = PlayerPrefs.GetInt("maths");
+            }
+        }
+        else if(key == "tech"){
+            if (PlayerPrefs.HasKey("tech"))
+            {
+                highScore.techHighestScore = PlayerPrefs.GetInt("tech");
+            }
         }
     }
 
-    private void SaveHighScore()
+    private void SaveHighScore(string key)
     {
-        PlayerPrefs.SetInt("highest_score", highScore.highest_score);
+        int highestScore;
+
+        if(key == "physics")
+            highestScore = highScore.physicsHighestScore;
+        else if(key == "maths")
+            highestScore = highScore.mathsHighestScore;
+        else
+            highestScore = highScore.techHighestScore;
+
+        PlayerPrefs.SetInt(key, highestScore);
     }
 
     // Update is called once per frame
