@@ -11,17 +11,21 @@ public class DataController : MonoBehaviour{
 
     private HighScore highScore;
 
+    private NetworkController nc;
+
     private string fileName = "data.json";
+    private string username;
 
     // Use this for initialization
     void Start()
     {
+        nc = FindObjectOfType<NetworkController>();
+
         DontDestroyOnLoad(gameObject);
 
         LoadGameData();
-        // LoadHighScore();
 
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("Username");
     }
 
     public RoundData GetPhysicsRoundData()
@@ -39,6 +43,19 @@ public class DataController : MonoBehaviour{
         return allRoundsDataTech[0];
     }
 
+    private int CalculateHighestScore(){
+        int math, phy, tech, highest;
+        math = highScore.mathsHighestScore;
+        phy = highScore.physicsHighestScore;
+        tech = highScore.techHighestScore;
+
+        return math + phy + tech;
+    }
+
+    private void GetUsername(){
+        username = PlayerPrefs.GetString("username");
+    }
+
     public void UpdateHighScore(int newScore, string key)
     {
         // If newScore is greater than highest score, update it
@@ -46,18 +63,30 @@ public class DataController : MonoBehaviour{
         {
             highScore.physicsHighestScore = newScore;
             SaveHighScore(key);
+
+            GetUsername();
+
+            nc.startPostScores(CalculateHighestScore(), username);
         }
 
         else if (key == "maths" && newScore > highScore.mathsHighestScore)
         {
             highScore.mathsHighestScore = newScore;
             SaveHighScore(key);
+
+            GetUsername();
+
+            nc.startPostScores(CalculateHighestScore(), username);
         }
 
         else if (key == "tech" && newScore > highScore.techHighestScore)
         {
             highScore.techHighestScore = newScore;
             SaveHighScore(key);
+
+            GetUsername();
+
+            nc.startPostScores(CalculateHighestScore(), username);
         }
     }
 
@@ -98,23 +127,19 @@ public class DataController : MonoBehaviour{
     {
         highScore = new HighScore();
 
-        if(key == "physics"){
-            if (PlayerPrefs.HasKey("physics"))
-            {
-                highScore.physicsHighestScore = PlayerPrefs.GetInt("physics");
-            }
+        if (PlayerPrefs.HasKey("physics"))
+        {
+            highScore.physicsHighestScore = PlayerPrefs.GetInt("physics");
         }
-        else if(key == "maths"){
-            if (PlayerPrefs.HasKey("maths"))
-            {
-                highScore.mathsHighestScore = PlayerPrefs.GetInt("maths");
-            }
+
+        if (PlayerPrefs.HasKey("maths"))
+        {
+            highScore.mathsHighestScore = PlayerPrefs.GetInt("maths");
         }
-        else if(key == "tech"){
-            if (PlayerPrefs.HasKey("tech"))
-            {
-                highScore.techHighestScore = PlayerPrefs.GetInt("tech");
-            }
+
+        if (PlayerPrefs.HasKey("tech"))
+        {
+            highScore.techHighestScore = PlayerPrefs.GetInt("tech");
         }
     }
 

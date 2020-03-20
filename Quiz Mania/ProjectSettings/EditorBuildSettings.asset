@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Quiz Window Tech.unity
     guid: aaa25f89b1738d447af8349340266b18
+  - enabled: 1
+    path: Assets/Scenes/Username.unity
+    guid: 49dbbb864da3e574bb29ed5ec03d42c8
+  - enabled: 1
+    path: Assets/Scenes/Leaderboard Scene.unity
+    guid: f59d85547278c4f4bae7b6d43c6fd2ab
   m_configObjects: {}

@@ -20,6 +20,10 @@ public class MenuScreen : MonoBehaviour
         SceneManager.LoadScene("Quiz Window Tech");
     }
 
+    public void LeaderBoard(){
+        SceneManager.LoadScene("Leaderboard Scene");
+    }
+
     // Update is called once per frame
     void Update()
     {

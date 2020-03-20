@@ -110,6 +110,7 @@ public class GameController : MonoBehaviour
         {
             Score += currentRoundData.scoreAdded;
             scoreText.text = Score.ToString();
+            timeLeft = currentRoundData.countdown;
         }
         else //the answer was incorrect so end the round
         {
