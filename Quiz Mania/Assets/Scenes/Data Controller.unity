@@ -195,6 +195,499 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ca45722acafc764683bcdf789c0cb61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allRoundsDataPhysics:
+  - name: Physics
+    countdown: 20
+    scoreAdded: 10
+    questions:
+    - questionText: What is newton's 2nd law of motion
+      answers:
+      - answerText: f = ma
+        isCorrect: 1
+      - answerText: f = p/a
+        isCorrect: 0
+      - answerText: f = 1/2 (mv(sq))
+        isCorrect: 0
+    - questionText: Intertia is a property of
+      answers:
+      - answerText: mass
+        isCorrect: 1
+      - answerText: weight
+        isCorrect: 0
+      - answerText: acceleration
+        isCorrect: 0
+    - questionText: Sound wave's type is
+      answers:
+      - answerText: transverse
+        isCorrect: 0
+      - answerText: longitudinal
+        isCorrect: 1
+      - answerText: torsional
+        isCorrect: 0
+    - questionText: Which of these doesn't factor in rainbow effect
+      answers:
+      - answerText: dispersion
+        isCorrect: 0
+      - answerText: refraction
+        isCorrect: 0
+      - answerText: rarefaction
+        isCorrect: 1
+    - questionText: Sound travels fastest through
+      answers:
+      - answerText: vaccuum
+        isCorrect: 0
+      - answerText: metal
+        isCorrect: 1
+      - answerText: liquid
+        isCorrect: 0
+    - questionText: Process when gas transforms into solid
+      answers:
+      - answerText: deposition
+        isCorrect: 1
+      - answerText: condensation
+        isCorrect: 0
+      - answerText: evaporation
+        isCorrect: 0
+    - questionText: Which color absorbs most radiation
+      answers:
+      - answerText: white
+        isCorrect: 0
+      - answerText: black
+        isCorrect: 1
+      - answerText: gray
+        isCorrect: 0
+    - questionText: Acceleration of gravity is
+      answers:
+      - answerText: 10.00 m/s(sq)
+        isCorrect: 0
+      - answerText: 9.81 m/s(sq)
+        isCorrect: 1
+      - answerText: 10.00 km/s(sq)
+        isCorrect: 0
+    - questionText: 0 resultant force in pendulum occurs at
+      answers:
+      - answerText: highest point
+        isCorrect: 0
+      - answerText: lowest point
+        isCorrect: 1
+      - answerText: middle point
+        isCorrect: 0
+    - questionText: Earthquakes are which waves
+      answers:
+      - answerText: transverse waves
+        isCorrect: 0
+      - answerText: seismic waves
+        isCorrect: 1
+      - answerText: surface waves
+        isCorrect: 0
+    - questionText: What component stays constant in projectile
+      answers:
+      - answerText: vertical velocity
+        isCorrect: 0
+      - answerText: horizontal velocity
+        isCorrect: 1
+      - answerText: none of above
+        isCorrect: 0
+    - questionText: Which radiation has highest frequency
+      answers:
+      - answerText: x-ray
+        isCorrect: 0
+      - answerText: gamma ray
+        isCorrect: 1
+      - answerText: ultra-violet ray
+        isCorrect: 0
+    - questionText: Formula for work done is
+      answers:
+      - answerText: w = fd
+        isCorrect: 0
+      - answerText: w = fd(Cos theta)
+        isCorrect: 1
+      - answerText: w = fd(Sin theta)
+        isCorrect: 0
+    - questionText: Which has more density
+      answers:
+      - answerText: water
+        isCorrect: 1
+      - answerText: vapour
+        isCorrect: 0
+      - answerText: ice
+        isCorrect: 0
+    - questionText: Area under time-acceleration graph represents
+      answers:
+      - answerText: velocity
+        isCorrect: 1
+      - answerText: distance
+        isCorrect: 0
+      - answerText: jerk
+        isCorrect: 0
+    - questionText: When light passes air-liquid plane, __ occurs
+      answers:
+      - answerText: reflection
+        isCorrect: 0
+      - answerText: refraction
+        isCorrect: 1
+      - answerText: absorption
+        isCorrect: 0
+    - questionText: How many dimensions are there according to theory of relativity
+      answers:
+      - answerText: 3
+        isCorrect: 0
+      - answerText: 11
+        isCorrect: 0
+      - answerText: 4
+        isCorrect: 1
+    - questionText: What metal is in a bulb
+      answers:
+      - answerText: silver
+        isCorrect: 0
+      - answerText: tungsten
+        isCorrect: 1
+      - answerText: nichrome
+        isCorrect: 0
+    - questionText: Which liquid property allows evaporation
+      answers:
+      - answerText: viscosity
+        isCorrect: 1
+      - answerText: density
+        isCorrect: 0
+      - answerText: volume
+        isCorrect: 0
+    - questionText: Light is a __ wave
+      answers:
+      - answerText: discrete
+        isCorrect: 1
+      - answerText: continuous
+        isCorrect: 0
+      - answerText: both
+        isCorrect: 0
+  allRoundsDataMaths:
+  - name: Maths
+    countdown: 20
+    scoreAdded: 10
+    questions:
+    - questionText: 50 x 5 = ?
+      answers:
+      - answerText: 505
+        isCorrect: 0
+      - answerText: 250
+        isCorrect: 0
+      - answerText: 2500
+        isCorrect: 1
+    - questionText: 13 squared is
+      answers:
+      - answerText: 169
+        isCorrect: 1
+      - answerText: 69
+        isCorrect: 0
+      - answerText: 131
+        isCorrect: 0
+    - questionText: Which is not a prime number
+      answers:
+      - answerText: 5
+        isCorrect: 0
+      - answerText: 1
+        isCorrect: 1
+      - answerText: 23
+        isCorrect: 0
+    - questionText: What is probability of a heads in 4 coin tosses
+      answers:
+      - answerText: 1/2
+        isCorrect: 0
+      - answerText: 1/4
+        isCorrect: 0
+      - answerText: 1/16
+        isCorrect: 1
+    - questionText: 'Find median: 1, 3, 8, 9'
+      answers:
+      - answerText: 3
+        isCorrect: 0
+      - answerText: 5.5
+        isCorrect: 1
+      - answerText: 8
+        isCorrect: 0
+    - questionText: 'Shape of graph: y = x'
+      answers:
+      - answerText: linear
+        isCorrect: 1
+      - answerText: parabola
+        isCorrect: 0
+      - answerText: hyperbola
+        isCorrect: 0
+    - questionText: Which does not have internal angle of 360
+      answers:
+      - answerText: Pentagon
+        isCorrect: 0
+      - answerText: trigon
+        isCorrect: 1
+      - answerText: square
+        isCorrect: 0
+    - questionText: 'Complete sequence: 1, 9, 25, 49, x'
+      answers:
+      - answerText: 121
+        isCorrect: 0
+      - answerText: 81
+        isCorrect: 1
+      - answerText: 65
+        isCorrect: 0
+    - questionText: Which is not perfect square
+      answers:
+      - answerText: 144
+        isCorrect: 0
+      - answerText: 81
+        isCorrect: 0
+      - answerText: 161
+        isCorrect: 1
+    - questionText: 2 + 2 * 2 = ?
+      answers:
+      - answerText: 6
+        isCorrect: 1
+      - answerText: 8
+        isCorrect: 0
+      - answerText: 12
+        isCorrect: 0
+    - questionText: 1004 / 2 = ?
+      answers:
+      - answerText: 52
+        isCorrect: 0
+      - answerText: 502
+        isCorrect: 0
+      - answerText: 5002
+        isCorrect: 0
+    - questionText: Formula for volume of cylinder is
+      answers:
+      - answerText: pi*r*h
+        isCorrect: 0
+      - answerText: 2*pi*r*h
+        isCorrect: 0
+      - answerText: pi*r2*h
+        isCorrect: 1
+    - questionText: What trignometric component is +ve in 3rd quadrant
+      answers:
+      - answerText: tan
+        isCorrect: 1
+      - answerText: cos
+        isCorrect: 0
+      - answerText: all
+        isCorrect: 0
+    - questionText: Derivation of distance equation gives
+      answers:
+      - answerText: acceleration equation
+        isCorrect: 0
+      - answerText: velocity equation
+        isCorrect: 1
+      - answerText: displacement equation
+        isCorrect: 0
+    - questionText: vector * vector = ?
+      answers:
+      - answerText: vector
+        isCorrect: 0
+      - answerText: scaler
+        isCorrect: 1
+      - answerText: product cant be taken
+        isCorrect: 0
+    - questionText: 121 * 11 = ?
+      answers:
+      - answerText: 1331
+        isCorrect: 1
+      - answerText: 1313
+        isCorrect: 0
+      - answerText: 1221
+        isCorrect: 0
+    - questionText: What is volume of rectangular empty swimming pool
+      answers:
+      - answerText: b*l
+        isCorrect: 0
+      - answerText: 1/2*b*l*h
+        isCorrect: 0
+      - answerText: b*l*h
+        isCorrect: 1
+    - questionText: 1/2/2 = ?
+      answers:
+      - answerText: 1
+        isCorrect: 1
+      - answerText: 1/4
+        isCorrect: 0
+      - answerText: 1/8
+        isCorrect: 0
+    - questionText: Who invented number 0
+      answers:
+      - answerText: Newton
+        isCorrect: 0
+      - answerText: Al-Jabr
+        isCorrect: 1
+      - answerText: Socrates
+        isCorrect: 0
+    - questionText: Which of these is called Newtonian maths
+      answers:
+      - answerText: Mechanical math
+        isCorrect: 1
+      - answerText: Geomatrical math
+        isCorrect: 0
+      - answerText: algebra
+        isCorrect: 0
+  allRoundsDataTech:
+  - name: Tech
+    countdown: 20
+    scoreAdded: 10
+    questions:
+    - questionText: Which is not a programming language
+      answers:
+      - answerText: c++
+        isCorrect: 0
+      - answerText: HTML
+        isCorrect: 1
+      - answerText: JavaScript
+        isCorrect: 0
+    - questionText: Which language is fastest
+      answers:
+      - answerText: Python
+        isCorrect: 0
+      - answerText: JAVA
+        isCorrect: 0
+      - answerText: C++
+        isCorrect: 1
+    - questionText: What does IDE mean
+      answers:
+      - answerText: Integrated Development Environment
+        isCorrect: 1
+      - answerText: Individual Development Environment
+        isCorrect: 0
+      - answerText: Isolated Development Environment
+        isCorrect: 0
+    - questionText: What software runs directly on hardware
+      answers:
+      - answerText: Operation System
+        isCorrect: 0
+      - answerText: Kernel
+        isCorrect: 1
+      - answerText: User Application
+        isCorrect: 0
+    - questionText: How many layers are in OSI model
+      answers:
+      - answerText: 5
+        isCorrect: 0
+      - answerText: 10
+        isCorrect: 0
+      - answerText: 7
+        isCorrect: 1
+    - questionText: What programming language is native to iOS development
+      answers:
+      - answerText: Swift
+        isCorrect: 1
+      - answerText: JAVA
+        isCorrect: 0
+      - answerText: Python
+        isCorrect: 0
+    - questionText: Where is data stored in a computer
+      answers:
+      - answerText: ROM
+        isCorrect: 1
+      - answerText: RAM
+        isCorrect: 0
+      - answerText: Processor
+        isCorrect: 0
+    - questionText: What is Google's open source AI API called
+      answers:
+      - answerText: Deep Mind
+        isCorrect: 0
+      - answerText: Tensor Flow
+        isCorrect: 1
+      - answerText: SIRI
+        isCorrect: 0
+    - questionText: Which is not a microcontroller
+      answers:
+      - answerText: Node ESP
+        isCorrect: 0
+      - answerText: AtMega 5600
+        isCorrect: 0
+      - answerText: Intel Duo
+        isCorrect: 1
+    - questionText: Tesla's automated cars use what technology to drive
+      answers:
+      - answerText: sonar
+        isCorrect: 1
+      - answerText: computer vision
+        isCorrect: 0
+      - answerText: heat vision
+        isCorrect: 0
+    - questionText: Google created Android
+      answers:
+      - answerText: True
+        isCorrect: 0
+      - answerText: False
+        isCorrect: 1
+    - questionText: Which OS was created first
+      answers:
+      - answerText: Macintosh
+        isCorrect: 1
+      - answerText: MS-DOS
+        isCorrect: 0
+      - answerText: Windows
+        isCorrect: 0
+    - questionText: Which is not a Big 4 company
+      answers:
+      - answerText: Amazon
+        isCorrect: 0
+      - answerText: Apple
+        isCorrect: 0
+      - answerText: IBM
+        isCorrect: 1
+    - questionText: API stands for
+      answers:
+      - answerText: Application Programming Interaface
+        isCorrect: 1
+      - answerText: Automated Programming Interface
+        isCorrect: 0
+      - answerText: Application Performance Interface
+        isCorrect: 0
+    - questionText: A graphic card is basically a
+      answers:
+      - answerText: Storage device
+        isCorrect: 0
+      - answerText: RAM
+        isCorrect: 0
+      - answerText: Processor
+        isCorrect: 1
+    - questionText: ReactJS is
+      answers:
+      - answerText: programming language
+        isCorrect: 0
+      - answerText: framework
+        isCorrect: 1
+      - answerText: IDE
+        isCorrect: 0
+    - questionText: Email is transferred through what protocol
+      answers:
+      - answerText: FTP
+        isCorrect: 0
+      - answerText: TCP
+        isCorrect: 0
+      - answerText: SMTP
+        isCorrect: 1
+    - questionText: TouchScreen is input or output device
+      answers:
+      - answerText: Input
+        isCorrect: 0
+      - answerText: Output
+        isCorrect: 0
+      - answerText: Both
+        isCorrect: 1
+    - questionText: Search engines are
+      answers:
+      - answerText: Web Crawlers
+        isCorrect: 0
+      - answerText: Web Scrapers
+        isCorrect: 0
+      - answerText: Both
+        isCorrect: 1
+    - questionText: A user application runs on
+      answers:
+      - answerText: ROM
+        isCorrect: 0
+      - answerText: RAM
+        isCorrect: 1
+      - answerText: Processor
+        isCorrect: 0
 --- !u!4 &474343240
 Transform:
   m_ObjectHideFlags: 0

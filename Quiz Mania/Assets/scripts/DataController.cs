@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class DataController : MonoBehaviour{
 
-    private RoundData[] allRoundsDataPhysics;
-    private RoundData[] allRoundsDataMaths;
-    private RoundData[] allRoundsDataTech;
+    public RoundData[] allRoundsDataPhysics;
+    public RoundData[] allRoundsDataMaths;
+    public RoundData[] allRoundsDataTech;
 
     private HighScore highScore;
 
@@ -121,6 +121,20 @@ public class DataController : MonoBehaviour{
         {
             Debug.LogError("Could'nt load data!");
         }
+        
+        // anroid data loading
+        TextAsset file = Resources.Load(fileName) as TextAsset;
+        if(file != null){
+            string content = file.ToString ();
+
+            GameData Data = JsonUtility.FromJson<GameData>(content);
+
+            // Retrieve the allRoundData property of loadedData
+            allRoundsDataPhysics = Data.allRoundsDataPhysics;
+            allRoundsDataMaths = Data.allRoundsDataMaths;
+            allRoundsDataTech = Data.allRoundsDataTech;
+        }
+
     }
 
     public void LoadHighScore(string key)

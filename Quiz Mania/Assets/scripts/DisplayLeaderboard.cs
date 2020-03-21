@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DisplayLeaderboard : MonoBehaviour
 {
@@ -36,5 +37,10 @@ public class DisplayLeaderboard : MonoBehaviour
             j++;
             scores[i].text = nc.onlineHighscore[j].ToString();
         }
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 }
